@@ -6,10 +6,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fashion Blog - Home</title>
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #800020; /* бордовый фон */
+            color: white; /* белый текст */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer, section, aside {
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+            nav a:hover {
+                text-decoration: underline;
+            }
+
+        figure img {
+            margin: 10px;
+            border: 3px solid white;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            border-top: 1px solid white;
+        }
+        header {
+            background-color: #660018; /* тёмно-бордовый фон */
+            padding: 20px;
+            border-bottom: 3px solid white; /* белая линия снизу */
+            border-radius: 0 0 20px 20px; /* скруглённые нижние углы */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.6); /* тень снизу */
+            text-align: center;
+        }
+
+            header h1 {
+                margin: 0;
+                font-size: 2em;
+                color: white;
+            }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+            nav a:hover {
+                text-decoration: underline;
+            }
+
+    </style>
+
+
 </head>
 <body>
   <header>
+
     <h1>Fashion Trends & Styling Tips</h1>
     <nav>
       <ul>

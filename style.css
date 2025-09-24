@@ -1,72 +1,84 @@
-/* style.css */
+
+/* Общие стили для сайта */
 body {
+    background-color: #800020; /* бордовый фон */
+    color: white; /* белый текст */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
+/* Шапка */
 header {
-    background: #f4a7bb;
+    background-color: #660018; /* тёмно-бордовый фон для header */
     padding: 20px;
+    border-bottom: 3px solid white;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
     text-align: center;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-    nav ul li {
-        display: inline;
-        margin: 0 10px;
+    header h1 {
+        margin: 0;
+        font-size: 2em;
+        color: white;
     }
 
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
 nav a {
+    color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
-section {
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+/* Форма */
+form label {
+    display: inline-block;
+    width: 120px;
+    font-weight: bold;
 }
 
-footer {
-    background: #222;
+form input[type="text"],
+form input[type="email"],
+form input[type="color"] {
+    padding: 5px;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: #660018;
     color: white;
+}
+
+form input[type="submit"] {
+    background-color: white;
+    color: #800020;
+    font-weight: bold;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+    form input[type="submit"]:hover {
+        background-color: #ffd6d6; /* светлый оттенок для эффекта */
+        color: #660018;
+    }
+
+/* Подвал */
+footer {
     text-align: center;
-    padding: 10px;
-}
-
-/* Float example */
-aside {
-    float: right;
-    width: 25%;
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin: 20px;
-}
-
-/* Positioning */
-figure img {
-    position: relative;
-    left: 10px;
-}
-
-/* Inline CSS example */
-h2 {
-    color: #b30059;
-}
-
-/* ID selector example */
-#special {
-    background: yellow;
-    padding: 10px;
-}
-
-/* Class selector example */
-.highlight {
-    color: red;
-    font-style: italic;
+    margin-top: 20px;
+    border-top: 1px solid white;
+    padding: 15px;
 }
