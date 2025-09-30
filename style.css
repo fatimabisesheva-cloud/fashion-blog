@@ -1,16 +1,16 @@
 
-/* Общие стили для сайта */
+/* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ */
 body {
-    background-color: #800020; /* бордовый фон */
-    color: white; /* белый текст */
+    background-color: #800020; /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ */
+    color: white; /* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* Шапка */
+/* пїЅпїЅпїЅпїЅпїЅ */
 header {
-    background-color: #660018; /* тёмно-бордовый фон для header */
+    background-color: #660018; /* пїЅпїЅпїЅпїЅ-пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ header */
     padding: 20px;
     border-bottom: 3px solid white;
     border-radius: 0 0 20px 20px;
@@ -35,7 +35,7 @@ nav ul {
 
 nav a {
     color: white;
-    background-color: #a00030; /* яркий бордовый */
+    background-color: #a00030; /* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
     padding: 8px 12px;
     border-radius: 8px;
     text-decoration: none;
@@ -45,10 +45,10 @@ nav a {
 
     nav a:hover {
         background-color: white;
-        color: #800020; /* бордовый при наведении */
+        color: #800020; /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
     }
 
-/* Форма */
+/* пїЅпїЅпїЅпїЅпїЅ */
 form label {
     display: inline-block;
     width: 120px;
@@ -76,11 +76,11 @@ form input[type="submit"] {
 }
 
     form input[type="submit"]:hover {
-        background-color: #ffd6d6; /* светлый оттенок для эффекта */
+        background-color: #ffd6d6; /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
         color: #660018;
     }
 
-/* Подвал */
+/* пїЅпїЅпїЅпїЅпїЅпїЅ */
 footer {
     text-align: center;
     margin-top: 20px;
@@ -89,39 +89,39 @@ footer {
 }
 nav a {
     color: white;
-    background-color: #a00030; /* фон для кнопки */
+    background-color: #a00030; /* пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ */
     padding: 8px 12px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
-    transition: 0.2s ease; /* плавный переход */
+    transition: 0.2s ease; /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
     display: inline-block;
 }
 
     nav a:hover {
         background-color: white;
-        color: #800020; /* бордовый при наведении */
-        transform: scale(1.1); /* лёгкое увеличение */
+        color: #800020; /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
+        transform: scale(1.1); /* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
     }
 
     nav a:active {
-        transform: scale(0.9); /* сжатие при клике */
+        transform: scale(0.9); /* пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ */
     }
 .trends li {
-    display: inline-block; /* чтобы выглядело как кнопки в ряд */
+    display: inline-block; /* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅ */
     margin: 8px;
     padding: 10px 20px;
-    background: #f5f5f5; /* светлый фон */
-    border-radius: 8px; /* скруглённые края */
-    transition: all 0.3s ease; /* плавный эффект */
+    background: #f5f5f5; /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ */
+    border-radius: 8px; /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ */
+    transition: all 0.3s ease; /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ */
     cursor: pointer;
     font-weight: 500;
 }
 
     .trends li:hover {
-        background: #ff4081; /* розовый фон при наведении */
-        color: white; /* белый текст */
-        transform: scale(0.95); /* лёгкое сжатие */
+        background: #ff4081; /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
+        color: white; /* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ */
+        transform: scale(0.95); /* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ */
     }
 .trends li {
     display: inline-block;
@@ -131,15 +131,15 @@ nav a {
     border-radius: 8px;
     transition: all 0.3s ease;
     cursor: pointer;
-    font-weight: bold; /* жирный текст */
-    font-size: 18px; /* крупнее */
-    color: #333; /* более тёмный цвет */
-    letter-spacing: 0.5px; /* немного расстояния между буквами */
+    font-weight: bold; /* пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ */
+    font-size: 18px; /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
+    color: #333; /* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ */
+    letter-spacing: 0.5px; /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
 }
 
     .trends li:hover {
-        background: #800020; /* бордовый фон при наведении */
-        color: #fff; /* белый текст */
+        background: #800020; /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
+        color: #fff; /* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ */
         transform: scale(0.95);
     }
 .outfits li {
@@ -150,24 +150,85 @@ nav a {
     border-radius: 8px;
     transition: all 0.3s ease;
     cursor: pointer;
-    font-weight: bold; /* жирный */
-    font-size: 18px; /* крупнее */
-    color: #333; /* контрастный текст */
+    font-weight: bold; /* пїЅпїЅпїЅпїЅпїЅпїЅ */
+    font-size: 18px; /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
+    color: #333; /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ */
 }
 
     .outfits li:hover {
-        background: #800020; /* бордовый при наведении */
+        background: #800020; /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
         color: #fff;
         transform: scale(0.95);
     }
 
-/* Для Office Outfit Example */
+/* пїЅпїЅпїЅ Office Outfit Example */
 .office {
     margin-top: 20px;
     padding: 15px;
     background: #f5f5f5;
-    border-left: 5px solid #800020; /* бордовая полоса сбоку */
+    border-left: 5px solid #800020; /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ */
     font-size: 18px;
     font-weight: bold;
     color: #333;
 }
+/* Part A: Selectors & Priority */
+p { color: blue; }              /* element selector */
+.demo-class { color: green; }   /* class selector */
+#demo-id { color: red; }        /* ID selector */
+/* inline style Р±СѓРґРµС‚ РїРѕРєР°Р·Р°РЅ РїСЂСЏРјРѕ РІ HTML (РІ РѕС‚С‡С‘С‚Рµ) */
+/* Part B: Colors & Fonts */
+h1, h2, h3 {
+    font-family: 'Georgia', serif;
+  }
+  p, li {
+    font-family: 'Arial', sans-serif;
+  }
+  .tip {
+    font-family: 'Courier New', monospace;
+    color: darkgreen;
+  }
+  
+  a {
+    text-decoration: none;
+    color: darkred;
+  }
+  a:hover {
+    color: orange;
+  }
+/* Part C: Spacing & Alignment */
+p {
+    line-height: 1.6;
+    margin: 10px;
+    padding: 5px;
+  }
+  .left { text-align: left; }
+  .center { text-align: center; }
+  .right { text-align: right; }
+  .justify { text-align: justify; }
+/* Part D: Profile Card */
+.profile-card {
+    border: 1px solid #ccc;
+    width: 250px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    transition: background-color 0.3s, border 0.3s;
+  }
+  .profile-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  .profile-card:hover {
+    background-color: #f0f8ff;
+    border: 2px solid darkblue;
+  }
+  .profile-card img {
+    width: 100px;   /* С€РёСЂРёРЅР° */
+    height: 100px;  /* РІС‹СЃРѕС‚Р° */
+    object-fit: cover; /* РѕР±СЂРµР¶РµС‚ Р°РєРєСѓСЂР°С‚РЅРѕ */
+    border-radius: 50%; /* РґРµР»Р°РµС‚ РєСЂСѓРіР»СѓСЋ С„РѕС‚РєСѓ */
+  }
+        
