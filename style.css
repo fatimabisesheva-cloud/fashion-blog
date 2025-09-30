@@ -231,4 +231,31 @@ p {
     object-fit: cover; /* обрежет аккуратно */
     border-radius: 50%; /* делает круглую фотку */
   }
-        
+/* Эстетичные округлённые кнопки */
+.fancy-btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    border: none;
+    border-radius: 50px; /* сильное округление */
+    background: #800020; /* бордовый фон */
+    color: #fff; /* белый текст */
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
+  
+  /* Hover — светлее бордовый + подсветка */
+  .fancy-btn:hover {
+    background-color: #a52a2a; /* чуть светлее бордовый */
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+  }
+  
+  /* Active — эффект прыжка + жёлтая подсветка */
+  .fancy-btn:active {
+    transform: scale(0.9);
+    box-shadow: 0 0 12px #b8860b; /* тёмно-жёлтая подсветка */
+  }
+  
