@@ -170,14 +170,14 @@ nav a {
     font-size: 18px;
     font-weight: bold;
     color: #333;
-}
-/* Part A: Selectors & Priority */
-p { color: blue; }              /* element selector */
-.demo-class { color: green; }   /* class selector */
-#demo-id { color: red; }        /* ID selector */
-/* inline style будет показан прямо в HTML (в отчёте) */
-/* Part B: Colors & Fonts */
-h1, h2, h3 {
+ }
+ /* Part A: Selectors & Priority */
+ p { color: blue; }              /* element selector */
+ .demo-class { color: green; }   /* class selector */
+ #demo-id { color: red; }        /* ID selector */
+ /* inline style будет показан прямо в HTML (в отчёте) */
+ /* Part B: Colors & Fonts */
+ h1, h2, h3 {
     font-family: 'Georgia', serif;
   }
   p, li {
@@ -257,5 +257,55 @@ p {
   .fancy-btn:active {
     transform: scale(0.9);
     box-shadow: 0 0 12px #b8860b; /* тёмно-жёлтая подсветка */
+  }
+  .btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: #800020; /* бордовый */
+  color: #fff;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.btn:hover {
+  background-color: #a52a2a; /* светлее бордовый */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.btn:active {
+  transform: scale(0.9);
+  box-shadow: 0 0 10px #b8860b; /* тёмно-жёлтая подсветка */
+}
+/* Градиентные кнопки бордовый → тёмно-жёлтый */
+.gradient-btn {
+    display: inline-block;
+    margin: 8px;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    font-weight: 500;
+    border: none;
+    border-radius: 50px; /* округлённые капсулы */
+    background: linear-gradient(135deg, #800020, #b8860b); /* бордовый → тёмно-жёлтый */
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  
+  /* Hover — ярче и больше тень */
+  .gradient-btn:hover {
+    box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+    transform: translateY(-2px); /* лёгкий подъём */
+  }
+  
+  /* Active — подпрыгивание */
+  .gradient-btn:active {
+    transform: scale(0.9);
+    box-shadow: 0 0 14px #b8860b;
   }
   
