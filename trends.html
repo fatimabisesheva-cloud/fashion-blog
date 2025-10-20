@@ -1,65 +1,54 @@
-<!-- trends.html -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Fashion Trends</title>
-    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Trends — Fashion Blog</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Top Fashion Trends</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="trends.html">Trends</a></li>
-                <li><a href="outfits.html">Outfit Ideas</a></li>
-                <li><a href="shopping.html">Shopping Guide</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section>
-        <h2>5 Must-Have Trends This Season</h2>
-        <ul class="trends">
-            <li>Oversized Blazers</li>
-            <li>Denim on Denim</li>
-            <li>Chunky Sneakers</li>
-            <li>Pastel Colors</li>
-            <li>Statement Bags</li>
+  <!-- navbar (same markup as index) -->
+  <nav class="navbar navbar-expand-lg navbar-dark site-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Fashion Blog</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenuT"><span class="navbar-toggler-icon"></span></button>
+      <div id="navMenuT" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="trends.html">Trends</a></li>
+          <li class="nav-item"><a class="nav-link" href="outfits.html">Outfit Ideas</a></li>
+          <li class="nav-item"><a class="nav-link" href="shopping.html">Shopping</a></li>
+          <li class="nav-item"><a class="nav-link" href="todo.html">Planner</a></li>
+          <li class="nav-item"><a class="nav-link" href="sort.html">Sort Prices</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
+      </div>
+    </div>
+  </nav>
 
-    </section>
+  <main class="container my-5">
+    <h2>Season Trends</h2>
+    <p>Here we place articles and gallery about seasonal trends...</p>
 
-    <footer>
-        <p>&copy; 2025 Fashion Blog</p>
-    </footer>
-    <script>
-        // Проверяем, была ли ранее выбрана тема
-        const currentTheme = localStorage.getItem("theme");
-      
-        if (currentTheme === "dark") {
-          document.body.classList.add("dark-mode");
-        } else {
-          document.body.classList.add("light-mode");
-        }
-      
-        // Если на странице есть кнопка переключения темы
-        const toggleBtn = document.getElementById("themeToggle");
-        if (toggleBtn) {
-          toggleBtn.addEventListener("click", () => {
-            document.body.classList.toggle("dark-mode");
-            document.body.classList.toggle("light-mode");
-      
-            // Сохраняем выбор пользователя
-            const newTheme = document.body.classList.contains("dark-mode") ? "dark" : "light";
-            localStorage.setItem("theme", newTheme);
-          });
-        }
-      </script>
-      
-      
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card card-feature mb-4">
+          <img src="images/fashion.jpg" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title">Earthy Tones</h5>
+            <p class="card-text">How to wear earthy tones this season.</p>
+          </div>
+        </div>
+      </div>
+      <!-- add more cards -->
+    </div>
+  </main>
+
+  <footer class="site-footer text-center py-4">
+    <div class="container"><p class="mb-0"><strong>Team:</strong> Fatima Bisesheva</p></div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
