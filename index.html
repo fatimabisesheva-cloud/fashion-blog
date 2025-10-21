@@ -1,401 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fashion Blog - Bootstrap Practice</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fashion Blog | Home</title>
 
-  <!-- Bootstrap CSS -->
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
   <style>
     body {
-      font-family: Arial, sans-serif;
-      transition: background-color 0.4s ease, color 0.4s ease;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f4;
+      color: #222;
+      transition: background-color 0.5s ease, color 0.5s ease;
     }
 
-    /* 🔹 Светлый режим (бордовый стиль) */
-    .light-mode {
-      background-color: #800020; /* бордовый фон */
-      color: white;
+    /* Navbar */
+    .navbar {
+      background-color: #800020 !important;
     }
-    .light-mode .navbar {
-      background-color: #660018 !important; /* тёмно-бордовый navbar */
+    .navbar a {
+      color: #fff !important;
+      font-weight: 500;
+      transition: color 0.3s ease;
     }
-    .light-mode .card {
-      background-color: #a00030;
-      color: white;
+    .navbar a:hover {
+      color: #f8d7da !important;
+    }
+
+    /* Buttons */
+    .btn-burgundy {
+      background: linear-gradient(135deg, #800020, #b22222);
       border: none;
+      color: #fff;
+      border-radius: 30px;
+      padding: 10px 20px;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+    .btn-burgundy:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(128,0,32,0.4);
     }
 
-    /* 🔹 Тёмный режим (тёмно-синий стиль) */
+    /* Dark mode */
     .dark-mode {
-      background-color: #0d1b2a !important; /* тёмно-синий фон */
-      color: white !important;
+      background-color: #0d1b2a;
+      color: #fff;
     }
     .dark-mode .navbar {
       background-color: #001f3f !important;
     }
-    .dark-mode .card {
-      background-color: #1b263b;
-      color: white;
-      border: none;
+    .dark-mode .btn-burgundy {
+      background: linear-gradient(135deg, #001f3f, #003366);
     }
 
-    /* 🔹 Кастомная бордовая кнопка */
-    .btn-burgundy {
-      background-color: #b22222;
-      color: white;
-      border-radius: 25px;
-      padding: 10px 20px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    .btn-burgundy:hover {
-      background-color: #a52a2a;
+    /* Hero — теперь просто серый фон */
+    .hero {
+      padding: 80px 20px;
+      background-color: #d3d3d3; /* светло-серый */
+      color: #000;
+      text-align: center;
     }
 
-    /* 🔹 Градиентные кнопки для профиля */
-    .gradient-btn {
-      display: inline-block;
-      margin: 8px;
-      padding: 12px 28px;
-      font-size: 16px;
-      font-weight: bold;
+    /* Carousel */
+    .carousel-container {
+      max-width: 900px;
+      margin: 50px auto;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    .carousel-item img {
+      height: 500px;
+      object-fit: cover;
+    }
+
+    /* Cards */
+    .card {
       border: none;
-      border-radius: 50px;
-      background: linear-gradient(135deg, #800020, #b8860b);
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #800020;
       color: #fff;
-      text-decoration: none;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-    .gradient-btn:hover {
-      background: linear-gradient(135deg, #a52a2a, #daa520);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.3);
-    }
-    .gradient-btn:active {
-      transform: scale(0.9);
-      box-shadow: 0 0 12px #b8860b;
+      padding: 20px 0;
+      text-align: center;
     }
   </style>
 </head>
 
-<body class="light-mode">
-
-  <!-- 🔹 Navbar -->
+<body>
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Fashion Blog</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Fashion Blog</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
+
+      <div class="collapse navbar-collapse justify-content-end" id="nav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="outfits.html">Outfits</a></li>
           <li class="nav-item"><a class="nav-link" href="trends.html">Trends</a></li>
-          <li class="nav-item"><a class="nav-link" href="outfits.html">Outfit Ideas</a></li>
-          <li class="nav-item"><a class="nav-link" href="shopping.html">Shopping Guide</a></li>
+          <li class="nav-item"><a class="nav-link" href="shopping.html">Shopping</a></li>
+          <li class="nav-item"><a class="nav-link" href="planner.html">Planner</a></li>
+          <li class="nav-item"><a class="nav-link" href="sort.html">Sort</a></li>
+          <li class="nav-item"><a class="nav-link" href="game.html">Game</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- 🔹 Hero Section -->
-  <header class="text-center my-5">
-    <h1 class="display-4">Fashion Trends & Styling Tips</h1>
-    <p class="lead">Stay stylish with the latest fashion inspirations and outfit guides.</p>
-  </header>
-
-  <!-- 🔹 Buttons -->
-  <div class="text-center mb-5">
-    <button class="btn btn-burgundy me-2">Read More</button>
-    <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#subscribeModal">Subscribe</button>
-  </div>
-
-  <!-- 🔹 Carousel Section -->
-<div id="fashionCarousel" class="carousel slide container my-5" data-bs-ride="carousel">
-  <div class="carousel-inner rounded-4 shadow-lg overflow-hidden">
-    <!-- Слайд 1 -->
-    <div class="carousel-item active">
-      <img src="images/fashion3.jpg" class="d-block w-85 " alt="Fashion 1">
-    </div>
-    <!-- Слайд 2 -->
-    <div class="carousel-item">
-      <img src="images/fashion4.jpg" class="d-block w-85 " alt="Fashion 2">
-    </div>
-    <!-- Слайд 3 -->
-    <div class="carousel-item">
-      <img src="images/fashion5.jpg" class="d-block w-85 " alt="Fashion 3">
-    </div>
-  </div>
-
-  <!-- Кнопки переключения -->
-  <button class="carousel-control-prev custom-control" type="button" data-bs-target="#fashionCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-  </button>
-  <button class="carousel-control-next custom-control" type="button" data-bs-target="#fashionCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-  </button>
-
-  <!-- Индикаторы -->
-  <div class="carousel-indicators mt-3">
-    <button type="button" data-bs-target="#fashionCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
-    <button type="button" data-bs-target="#fashionCarousel" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#fashionCarousel" data-bs-slide-to="2"></button>
-  </div>
-</div>
-
-<!-- 🔸 Стили -->
-<style>
-.carousel-inner img {
-  height: 500px;
-  object-fit: cover;
-  transition: transform 0.6s ease;
-}
-
-/* 🔹 Эффект приближения при наведении */
-.carousel-inner img:hover {
-  transform: scale(1.03);
-}
-
-/* 🔹 Индикаторы */
-.carousel-indicators [data-bs-target] {
-  background-color: #800020;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-}
-
-.carousel-indicators .active {
-  background-color: #b22222;
-}
-
-/* 🔹 Кнопки навигации */
-.custom-control .carousel-control-prev-icon,
-.custom-control .carousel-control-next-icon {
-  filter: invert(20%) sepia(70%) saturate(400%) hue-rotate(-10deg);
-  background-size: 60%;
-}
-
-.custom-control:hover .carousel-control-prev-icon,
-.custom-control:hover .carousel-control-next-icon {
-  filter: invert(15%) sepia(90%) saturate(500%) hue-rotate(-20deg);
-}
-</style>
-
-
-  <!-- 🔹 Image Section -->
-  <section class="text-center">
-    <figure>
-      <img src="images/fashion.jpg" alt="Stylish Outfit" width="300" class="m-2 rounded shadow">
-      <img src="images/fashion1.jpg" alt="Stylish Outfit" width="300" class="m-2 rounded shadow">
-      <img src="images/fashion2.jpg" alt="Stylish Outfit" width="300" class="m-2 rounded shadow">
-      <figcaption class="mt-2">Latest street fashion inspiration</figcaption>
-    </figure>
+  <!-- Hero -->
+  <section class="hero text-center">
+    <h1 class="fw-bold">Welcome to Fashion Blog</h1>
+    <p class="lead">Your daily inspiration for style, beauty and confidence.</p>
+    <button class="btn-burgundy">Discover More</button>
+    <button id="themeToggle" class="btn btn-dark ms-2">Toggle Dark Mode</button>
   </section>
 
-  <!-- 🔹 Bootstrap Cards -->
+  <!-- Carousel -->
+  <div class="carousel-container">
+    <div id="fashionCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/fashion3.jpg" class="d-block w-100" alt="Fashion 1">
+        </div>
+        <div class="carousel-item">
+          <img src="images/fashion4.jpg" class="d-block w-100" alt="Fashion 2">
+        </div>
+        <div class="carousel-item">
+          <img src="images/fashion5.jpg" class="d-block w-100" alt="Fashion 3">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#fashionCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#fashionCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Cards Section -->
   <div class="container my-5">
-    <div class="row justify-content-center">
-      <div class="col-md-4 mb-4">
-        <div class="card shadow-sm mx-auto" style="max-width: 320px;">
-          <img src="images/fashion6.jpg" class="card-img-top" alt="Street Style">
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-4">
+        <div class="card shadow">
+          <img src="images/fashion1.jpg" class="card-img-top" alt="Style 1">
           <div class="card-body text-center">
-            <h5 class="card-title">Street Style</h5>
-            <p class="card-text">Discover the latest street fashion and how to combine comfort with style.</p>
-            <a href="#" class="btn btn-burgundy">Explore</a>
+            <h5 class="card-title">Elegant Street Look</h5>
+            <p class="card-text">Mix urban and chic style with our latest outfit tips.</p>
+            <a href="outfits.html" class="btn-burgundy">View Outfits</a>
           </div>
         </div>
       </div>
-      <div class="col-md-4 mb-4">
-        <div class="card shadow-sm mx-auto" style="max-width: 320px;">
-          <img src="images/fashion2.jpg" class="card-img-top" alt="Elegant Outfit">
+      <div class="col-md-4">
+        <div class="card shadow">
+          <img src="images/fashion6.jpg" class="card-img-top" alt="Style 2">
           <div class="card-body text-center">
-            <h5 class="card-title">Elegant Outfits</h5>
-            <p class="card-text">Ideas for elegant evening looks that will inspire your next event outfit.</p>
-            <a href="#" class="btn btn-burgundy">Explore</a>
+            <h5 class="card-title">Minimalist Vibes</h5>
+            <p class="card-text">Discover how simplicity can be your strongest statement.</p>
+            <a href="shopping.html" class="btn-burgundy">Shop the Look</a>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- 🔹 FAQ Section -->
-<section class="container my-5">
-  <h2 class="text-center mb-4 fw-bold">Frequently Asked Questions</h2>
-
-  <div class="accordion" id="faqAccordion">
-
-    <!-- Question 1 -->
-    <div class="accordion-item rounded-4 shadow-sm mb-3 faq-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
-          What are the latest fashion trends this season?
-        </button>
-      </h2>
-      <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-        <div class="accordion-body">
-          This season is all about earthy tones, layered outfits, and minimalist accessories.
-        </div>
-      </div>
-    </div>
-
-    <!-- Question 2 -->
-    <div class="accordion-item rounded-4 shadow-sm mb-3 faq-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#q2">
-          Where can I find affordable stylish clothes?
-        </button>
-      </h2>
-      <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-        <div class="accordion-body">
-          You can explore online platforms like Vogue, Zara, or local boutiques that often offer seasonal discounts.
-        </div>
-      </div>
-    </div>
-
-    <!-- Question 3 -->
-    <div class="accordion-item rounded-4 shadow-sm mb-3 faq-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#q3">
-          How can I mix elegant and casual styles?
-        </button>
-      </h2>
-      <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-        <div class="accordion-body">
-          Pair elegant blouses with jeans, or add a blazer to a casual dress for a perfect balance.
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<style>
-/* 🔸 Стиль для блока FAQ */
-.faq-item {
-  border: none;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-/* 🔸 При наведении — мягкое свечение и бордовый текст */
-.faq-item:hover {
-  box-shadow: 0 4px 15px rgba(128, 0, 32, 0.3);
-  transform: translateY(-2px);
-}
-
-/* 🔸 Кнопка вопроса */
-.accordion-button {
-  border-radius: 20px !important;
-  transition: all 0.3s ease;
-}
-
-/* 🔸 При наведении — бордовый текст */
-.accordion-button:hover {
-  color: #800020;
-  background-color: #f8f9fa;
-}
-
-/* 🔸 Когда панель открыта — бордовая рамка */
-.accordion-button:not(.collapsed) {
-  color: #800020;
-  background-color: #fff5f7;
-  border-bottom: 2px solid #800020;
-}
-</style>
-
-  <!-- 🔹 Profile Section -->
-  <section class="profile-card text-center my-5" id="author-card">
-    <img src="images/author.jpg" alt="Author Photo" style="width:150px; height:auto;" class="rounded-circle shadow mb-3">
-    <div>
-      <a href="#" class="gradient-btn">Fatima Bisesheva</a>
-      <a href="#" class="gradient-btn">Fashion enthusiast and stylist sharing ideas to inspire your wardrobe.</a>
-      <a href="#" class="gradient-btn">Selector Priority Test</a>
-    </div>
-  </section>
-
-  <!-- 🔹 Dark Mode Toggle -->
-  <div class="text-center mb-5">
-    <button id="themeToggle" class="btn btn-dark">Toggle Dark / Light Mode</button>
-  </div>
-
-  <!-- 🔹 NEW Modal (Subscribe Form) -->
-  <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content text-dark">
-        <div class="modal-header">
-          <h5 class="modal-title" id="subscribeModalLabel">Subscribe to Our Blog</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="mb-3">
-              <label for="emailInput" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="emailInput" placeholder="name@example.com">
-            </div>
-            <button type="submit" class="btn btn-burgundy w-100">Subscribe</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 🔹 Footer -->
-  <footer class="text-center py-4 border-top">
-    <div class="container">
-      <p class="mb-2">&copy; 2025 Fashion Blog</p>
-      <p class="mb-2">
-        <strong>Email:</strong> <a href="mailto:fashionblog@mail.ru" class="text-white text-decoration-none">fashionblog@mail.ru</a> |
-        <strong>Phone:</strong> <a href="tel:+77001234567" class="text-white text-decoration-none">+7 (700) 123-45-67</a>
-      </p>
-      <div>
-        <a href="https://instagram.com" target="_blank" class="me-3 text-white text-decoration-none">
-          <i class="bi bi-instagram"></i> Instagram
-        </a>
-        <a href="https://facebook.com" target="_blank" class="me-3 text-white text-decoration-none">
-          <i class="bi bi-facebook"></i> Facebook
-        </a>
-        <a href="https://t.me" target="_blank" class="text-white text-decoration-none">
-          <i class="bi bi-telegram"></i> Telegram
-        </a>
-      </div>
-    </div>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Fashion Blog | Designed by Fatima Bisesheva</p>
   </footer>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
   <script>
-    // Проверяем сохранённую тему при загрузке
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
-      document.body.classList.add("dark-mode");
-    } else {
-      document.body.classList.add("light-mode");
-    }
-  
-    // Кнопка переключения
     const toggleBtn = document.getElementById("themeToggle");
     toggleBtn.addEventListener("click", () => {
-      document.body.classList.toggle("light-mode");
       document.body.classList.toggle("dark-mode");
-  
-      // Сохраняем выбор в localStorage
-      if (document.body.classList.contains("dark-mode")) {
-        localStorage.setItem("theme", "dark");
-      } else {
-        localStorage.setItem("theme", "light");
-      }
     });
   </script>
-  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
