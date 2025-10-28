@@ -1,187 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | Fashion Blog</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <style>
     body {
-      margin: 0;
-      font-family: "Poppins", sans-serif;
-      background-color: #5a0b0b;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-      transition: background-color 0.4s ease, color 0.4s ease;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f4;
+      color: #222;
+      transition: background-color 0.5s ease, color 0.5s ease;
     }
 
-    nav {
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.3);
-      display: flex;
-      justify-content: center;
-      padding: 10px 0;
-      gap: 25px;
-      position: sticky;
-      top: 0;
-      backdrop-filter: blur(6px);
-      z-index: 100;
+    .navbar {
+      background-color: #800020 !important;
     }
 
-    nav a {
-      text-decoration: none;
-      color: white;
+    .navbar a {
+      color: #fff !important;
       font-weight: 500;
-      padding: 8px 18px;
-      border-radius: 20px;
-      transition: all 0.3s ease;
     }
 
-    nav a:hover {
-      background-color: white;
-      color: #5a0b0b;
-      transform: scale(1.05);
+    .navbar a:hover {
+      color: #f8d7da !important;
     }
 
-    .about-container {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 30px;
-      text-align: center;
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 20px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-      animation: fadeIn 1s ease;
-    }
-
-    h1 {
-      font-size: 2.3rem;
-      margin-bottom: 15px;
-    }
-
-    p {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      margin-bottom: 15px;
-    }
-
-    .team-section {
-      margin-top: 30px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
-    }
-
-    .member {
-      background-color: rgba(255, 255, 255, 0.15);
-      border-radius: 20px;
-      padding: 15px;
-      width: 230px;
-      transition: all 0.3s ease;
-    }
-
-    .member:hover {
-      transform: translateY(-6px);
-      background-color: rgba(255, 255, 255, 0.25);
-    }
-
-    .member img {
-      width: 100%;
-      border-radius: 15px;
-      margin-bottom: 10px;
-    }
-
-    .member h3 {
-      margin: 5px 0;
-      font-size: 1.2rem;
-    }
-
-    #toggle-theme {
-      margin: 25px 0;
-      background-color: white;
-      color: #5a0b0b;
+    .btn-burgundy {
+      background: linear-gradient(135deg, #800020, #b22222);
       border: none;
+      color: #fff;
+      border-radius: 30px;
       padding: 10px 20px;
-      border-radius: 20px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      font-weight: 600;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
     }
 
-    #toggle-theme:hover {
+    .btn-burgundy:hover {
       transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(128,0,32,0.4);
     }
 
     .dark-mode {
-      background-color: #0a1a3a;
-      color: #ffffff;
+      background-color: #0d1b2a;
+      color: #fff;
+    }
+    .dark-mode .navbar {
+      background-color: #001f3f !important;
     }
 
-    .dark-mode nav a:hover {
-      color: #0a1a3a;
+    .about-section {
+      text-align: center;
+      padding: 80px 20px;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+    .about-text {
+      max-width: 700px;
+      margin: 30px auto;
+      background-color: rgba(255,255,255,0.9);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      display: none; /* сначала скрыто */
+    }
+
+    .dark-mode .about-text {
+      background-color: rgba(0,0,0,0.3);
+    }
+
+    footer {
+      background-color: #800020;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
     }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="about.html">About</a>
-    <a href="index.html">Home</a>
-    <a href="trends.html">Trends</a>
-    <a href="shopping.html">Shopping</a>
-    <a href="planner.html">Planner</a>
-    <a href="sort.html">Sort</a>
-    <a href="game.html">Game</a>
-     <a href="contact.html">Contact</a>
-      <a href="outfits.html">Outfits</a>
-  </nav>
 
-  <div class="about-container">
-    <h1>About Our Fashion World 👠</h1>
-    <p>
-      Welcome to our <b>Fashion Blog</b> — a creative space where style meets inspiration.  
-      We share the latest trends, outfit ideas, and style advice for everyone who loves fashion.  
-      Our mission is to help you express your individuality through design, color, and confidence.
-    </p>
-    <p>
-      From elegant looks to street style, from shopping guides to outfit planners —  
-      our platform is all about exploring and celebrating fashion in every form.
-    </p>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Fashion Blog</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <h2>Meet Our Team 💋</h2>
-    <div class="team-section">
-      <div class="member">
-        <img src="images/fashion12.jpg" alt="Fashion Editor">
-        <h3>Fatima B.</h3>
-        <p>Founder & Editor</p>
-      </div>
-      <div class="member">
-        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="Stylist">
-        <h3>Lisa K.</h3>
-        <p>Lead Stylist</p>
-      </div>
-      <div class="member">
-        <img src="images/fashion13.jpg" alt="Photographer">
-        <h3>Emily R.</h3>
-        <p>Photographer</p>
+      <div class="collapse navbar-collapse justify-content-end" id="nav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="outfits.html">Outfits</a></li>
+          <li class="nav-item"><a class="nav-link" href="trends.html">Trends</a></li>
+          <li class="nav-item"><a class="nav-link" href="shopping.html">Shopping</a></li>
+          <li class="nav-item"><a class="nav-link" href="planner.html">Planner</a></li>
+          <li class="nav-item"><a class="nav-link" href="sort.html">Sort</a></li>
+          <li class="nav-item"><a class="nav-link" href="game.html">Game</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
       </div>
     </div>
-  </div>
+  </nav>
 
-  <button id="toggle-theme">Toggle Dark Mode</button>
+  <!-- About Section -->
+  <section class="about-section">
+    <h1 class="fw-bold">About Fashion Blog</h1>
+    <p class="lead">Discover the story behind the style.</p>
+    
+    <button id="toggleInfo" class="btn-burgundy mt-3">Show / Hide Info</button>
+
+    <div class="about-text mt-4">
+      <p>Welcome to <strong>Fashion Blog</strong> — a creative space built for dreamers, designers, and everyone who believes that style is a way to express who you are. ✨</p>
+      <p>Founded by <strong>Fatima Bisesheva</strong>, this blog shares inspirations, trends, and stories that help you feel confident in your look every day.</p>
+      <p>From streetwear to haute couture — we cover it all, with passion and love for detail.</p>
+    </div>
+
+    <button id="themeToggle" class="btn btn-dark mt-3">Toggle Dark Mode</button>
+  </section>
+
+  <footer>
+    <p>© 2025 Fashion Blog | Designed by Fatima Bisesheva</p>
+  </footer>
+
+  <!-- jQuery + Bootstrap -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>
-    const toggleBtn = document.getElementById("toggle-theme");
-    toggleBtn.addEventListener("click", () => {
-      document.body.classList.toggle("dark-mode");
+    $(document).ready(function(){
+      // Текст плавно появляется при загрузке страницы
+      $('.about-text').fadeIn(1500);
+
+      // Кнопка для slideToggle
+      $('#toggleInfo').click(function(){
+        $('.about-text').slideToggle(800);
+      });
+
+      // Переключение темы
+      $('#themeToggle').click(function(){
+        $('body').toggleClass('dark-mode');
+      });
     });
   </script>
+
 </body>
 </html>
