@@ -282,8 +282,23 @@
 <!-- Fashion Trends (фото в карточках с анимацией) -->
 <div class="container text-center my-5">
   <h3 style="color:#b22222;">🔥 Fashion Trends 2025</h3>
+  <div class="container text-center mt-3">
+  <input id="trendSearch" class="form-control mx-auto" style="max-width:400px;" type="text" placeholder="Search fashion trend...">
+</div>
   <div id="trendCards" class="row g-4 justify-content-center mt-4"></div>
   <button id="showTrends" class="btn-burgundy mt-3">Show Trends</button>
+  <script>
+  const searchInput = document.getElementById("trendSearch");
+  searchInput.addEventListener("keyup", () => {
+    const filter = searchInput.value.toLowerCase();
+    const cards = document.querySelectorAll("#trendCards .card");
+    cards.forEach(card => {
+      const title = card.querySelector(".card-title").textContent.toLowerCase();
+      card.parentElement.style.display = title.includes(filter) ? "block" : "none";
+    });
+  });
+</script>
+
 </div>
 
 <style>
@@ -349,6 +364,7 @@
   <!-- Footer -->
   <footer>
     <p>© 2025 Fashion Blog | Designed by Fatima Bisesheva</p>
+    <p id="datetimeBlock"></p>
   </footer>
 
   <!-- Bootstrap + jQuery -->
@@ -391,6 +407,34 @@
     $('#removeComment').click(()=> $('#commentList p:last').remove());
     
   </script>
+  <script>
+  const dateBlock = document.getElementById('datetimeBlock');
+  if (dateBlock) {
+    setInterval(() => {
+      const now = new Date();
+      dateBlock.textContent = now.toLocaleString();
+    }, 1000);
+  }
+  const body = document.body;
+const themeToggleBtn = document.getElementById('themeToggle');
+
+// Проверяем сохранённую тему
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+  body.classList.add('dark-mode');
+} else {
+  body.classList.remove('dark-mode'); // убираем, если светлая
+}
+
+// Переключение темы по кнопке
+themeToggleBtn.addEventListener('click', () => {
+  body.classList.toggle('dark-mode'); // переключаем
+  // сохраняем текущее состояние
+  localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+});
+
+</script>
+
 
 </body>
 </html>
